@@ -14,15 +14,15 @@ $('.main-menu nav').meanmenu({
 $('.slider-active').owlCarousel({
     loop:true,
     nav:true,
+    autoplay:true,
 	navText:['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
     responsive:{
         0:{
-            items:1,
-			nav:false,
+            items:1
+			
         },
         767:{
-            items:1,
-			nav:false,
+            items:1
         },
         1000:{
             items:1
