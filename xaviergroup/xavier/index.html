@@ -6,7 +6,8 @@
 		<!-- Favicon-->
 		<link rel="shortcut icon" href="img/fav.png">
 		<!-- Author Meta -->
-		<meta name="author" content="colorlib">
+		<!-- <meta name="author" content="colorlib"> -->
+		<meta name="author" content="biroyalit">
 		<!-- Meta Description -->
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
@@ -14,7 +15,7 @@
 		<!-- meta character set -->
 		<meta charset="UTF-8">
 		<!-- Site Title -->
-		<title>Education</title>
+		<title>Xavier Educational Group</title>
 
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet"> 
 			<!--
@@ -45,21 +46,21 @@
 			  			</div>
 			  			<div class="col-lg-6 col-sm-6 col-4 header-top-right no-padding">
 			  				<a href="tel:+953 012 3654 896"><span class="lnr lnr-phone-handset"></span> <span class="text">+919556780504</span></a>
-			  				<a href="mailto:support@colorlib.com"><span class="lnr lnr-envelope"></span> <span class="text">support@xavieredugroup.com</span></a>			
+			  				<a href="mailto:support@xavieredugroup.com"><span class="lnr lnr-envelope"></span> <span class="text">support@xavieredugroup.com</span></a>			
 			  			</div>
 			  		</div>			  					
 	  			</div>
 			</div>
-		    <div class="container main-menu">
+		    <div class="container main-menu" style="border-bottom: none;">
 		    	<div class="row align-items-center justify-content-between d-flex">
 			      <div id="logo">
-			        <a href="index.html"><img src="img/XAVIERPNG.png" height="65px" width="280" alt="" title="" /></a>
+			        <a href="index.html"><img src="img/XAVIERPNG.png" height="65" width="280" alt="" title="" /></a>
 			      </div>
 			      <nav id="nav-menu-container">
 			        <ul class="nav-menu">
 			          <li><a href="index.html">Home</a></li>
 			          <li><a href="about.html">About</a></li>
-			          <li><a href="">Membership</a>
+			          <li class="menu-has-children"><a href="">Membership</a>
 			               <ul>
 			               <li><a href="login.html">Xavier Associate</a></li>
 			              <li><a href="login.html">Business Associate</a></li>
@@ -68,8 +69,9 @@
 			              <li><a href="login.html">Staff Associate</a></li>
 			              </ul>
 			          </li>
-			          <li><a href="">Branch Detail</a>
+			          <li class="menu-has-children"><a href="">Branch Detail</a>
 			          	  <ul>
+			          	  <li><a href="#">Branch Office</a></li>
 			              <li><a href="#">Play School</a></li>
 			              <li><a href="#">Public School</a></li>
 			              <li><a href="#">Nursery Training</a></li>
@@ -78,9 +80,9 @@
 			              <li><a href="#">Coaching Centre</a></li>
 			              </ul>
 			          </li>
-			          <li><a href="courses.html">Courses</a>
+			          <li class="menu-has-children"><a href="">Courses</a>
 			          	  <ul>
-			              <li><a href="course-details.html">Educational</a></li>
+			              <li><a href="#">Educational</a></li>
 			              <li><a href="#">Professional</a></li>
 			              <li><a href="#">Vocational</a></li>
 			              </ul>
@@ -422,18 +424,19 @@
 								<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
 								<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
 								<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
-								<textarea class="form-control" name="phone" placeholder="Type Your Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type Your Message'" ></textarea>
-								<div class="form-select" id="service-select">
+								
+								<div class="form-select" id="service-select" style="margin-bottom: 5px;">
 									<select>
 										<option datd-display="">Choose Branch</option>
 										<option value="1">Play School</option>
 										<option value="2">Public School</option>
 										<option value="3">Nursery Training</option>
 										<option value="4">Computer Training</option>
-										<option value="4">Activity Centre</option>
-										<option value="4">Coaching Centres</option>
+										<option value="5">Activity Centre</option>
+										<option value="6">Coaching Centres</option>
 									</select>
-								</div>									
+								</div>
+								<textarea class="form-control" name="message" placeholder="Type Your Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type Your Message'" ></textarea>									
 								<button class="primary-btn text-uppercase">Submit</button>
 							</form>
 						</div>
@@ -548,7 +551,7 @@
 						<div class="active-review-carusel">
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<a href="#"><h4>Jamir Hasan</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -558,12 +561,12 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<a href="#"><h4>Ayushman Patel</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -573,12 +576,12 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<a href="#"><h4>Aman Singh</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -588,7 +591,7 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
@@ -603,12 +606,12 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>	
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<a href="#"><h4>Sunil Bhattacharya</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -618,12 +621,12 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<a href="#"><h4>Md Mohammad</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -633,13 +636,13 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
 								<img src="img/r1.png" alt="">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Fannie Rowe</h4></a>
+									<a href="#"><h4>Rahul Roy</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -649,12 +652,12 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>
 							<div class="single-review item">
 								<div class="title justify-content-start d-flex">
-									<a href="#"><h4>Hulda Sutton</h4></a>
+									<a href="#"><h4>Ashok Pal</h4></a>
 									<div class="star">
 										<span class="fa fa-star checked"></span>
 										<span class="fa fa-star checked"></span>
@@ -664,7 +667,7 @@
 									</div>
 								</div>
 								<p>
-									Accessories Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker. Here you can find the best computer accessory for your laptop, monitor, printer, scanner, speaker.
+									Education is the process of facilitating learning, or the acquisition of knowledge, skills, values,Some education systems have separate middle schools, with the transition to the final stage of secondary education taking place at around.
 								</p>
 							</div>																												
 						</div>
@@ -679,7 +682,7 @@
 					<div class="overlay overlay-bg"></div>
 					<div class="row justify-content-center">
 						<div class="wrap">
-							<h1 class="text-white">Become an instructor</h1>
+							<h1 class="text-white">Become an Instructor</h1>
 							<p>
 								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
 							</p>
@@ -846,7 +849,7 @@
 					</div>
 					<div class="footer-bottom row align-items-center justify-content-between">
 						<p class="footer-text m-0 col-lg-6 col-md-12"><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://biroyalits.com" target="_blank">Biroyal IT</a> &amp; distributed by <a href="https://xavieredugroup.com" target="_blank">Xavier Educational Group</a>
+Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Made<i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://biroyalit.com" target="_blank">Biroyal IT</a> &amp; distributed by <a href="http://xavieredugroup.com" target="_blank">Xavier Educational Group</a>
 <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
 						<div class="col-lg-6 col-sm-12 footer-social">
 							<a href="#"><i class="fa fa-facebook"></i></a>
