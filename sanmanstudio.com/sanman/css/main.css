@@ -10,7 +10,9 @@
 /*************************
 *******Typography******
 **************************/
-
+.active{
+  background-color: #661f84;
+}
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 14px;
@@ -295,6 +297,9 @@ section {
 
 .our-services .col-sm-4:hover .service-icon {
   background-color: #333;
+}
+.service-icon:hover{
+  background-color: #661f84 !important;
 }
 
 .our-services .col-sm-4 {
