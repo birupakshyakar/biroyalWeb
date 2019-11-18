@@ -1,6 +1,26 @@
 $(document).ready(function() {
     "use strict";
 
+
+    $(window).scroll(function () {
+       // var Bottom = $('#home').height() + $(window).scrollTop() >= $(document).height();
+        //var scrollTop     = $(window).scrollTop();
+        var elementOffset = $('#home').offset().top;
+       // var distance      = (elementOffset - scrollTop);
+        if(elementOffset < 100)
+        {
+  
+            $('.web-header').hide();
+        }
+        else if(elementOffset > 100)
+        {
+            //alert(distance);
+            console.log(elementOffset);
+            $('.web-header').show();
+        }
+    });
+
+
     var window_width = $(window).width(),
         window_height = window.innerHeight,
         header_height = $(".default-header").height(),
@@ -42,8 +62,8 @@ $(document).ready(function() {
     //------- Datepicker  js --------//  
 
       $( function() {
-        $( "#datepicker" ).datepicker();
-        $( "#datepicker2" ).datepicker();
+        /*$( "#datepicker" ).datepicker();
+        $( "#datepicker2" ).datepicker();*/
       } );
 
 
