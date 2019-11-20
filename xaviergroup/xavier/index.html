@@ -104,7 +104,7 @@
 			          </li>
 			          <li class="menu-has-children"><a href="">Download</a>
 			          <ul>
-			          		<li><a href="download/4.jpg" download>Approval Letter</a></li>
+			          		<li><a href="download.html#approval" download>Approval Letter</a></li>
 			          		<li><a href="download/JobApplicationFrom.docx" download>Job Application Form</a></li>
 			          		<li class="menu-has-children"><a href="#">Franchise Application Form</a>
 			          		<ul>
@@ -126,7 +126,8 @@
 			          			<li><a href="#">Activity Centre</a></li>
 			          			<li><a href="#">Coaching Centre</a></li>
 			          		</ul>
-			          		<li><a href="download/5.pdf" download>Welcome-kit</a></li>
+			          		<li><a href="download.html#welcome" download>Welcome-kit</a></li>
+			          		
 			              	<li><a href="#">Admission Form</a></li>
 			              	<li><a href="#">Prospectus</a></li>			              	
 			            </ul>
@@ -449,7 +450,7 @@
 						</div>
 						<div class="col-lg-4 col-md-6 search-course-right section-gap">
 							<form class="form-wrap" action="#">
-								<h4 class="text-white pb-20 text-center mb-30">Search for Available Course</h4>		
+								<h4 class="text-white pb-20 text-center mb-30">Apply for the Membership</h4>		
 								<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
 								<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
 								<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
@@ -715,7 +716,7 @@
 							<p>
 								There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
 							</p>
-							<a class="primary-btn wh" href="#">Apply for the post</a>								
+							<a class="primary-btn wh" href="#" data-toggle="modal" data-target="#applyforpost">Apply for the post</a>								
 						</div>					
 					</div>
 				</div>	
@@ -800,7 +801,7 @@
 							<h1>Apply For Franchise</h1>
 						</div>
 						<div class="col-lg-4 cta-right">
-							<a class="primary-btn wh" href="#">Click Here</a>
+							<a class="primary-btn wh" href="#" data-toggle="modal" data-target="#applyFranchiseModal">Click Here</a>
 						</div>
 					</div>
 				</div>	
@@ -888,7 +889,74 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 						</div>
 					</div>						
 				</div>
-			</footer>	
+			</footer>
+			<!-- Apply franchise Modal -->
+			<div class="modal fade" id="applyFranchiseModal" role="dialog">
+    			<div class="modal-dialog modal-lg">    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+        				<h4 class="modal-title">Apply for Franchise</h4>
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					
+        				</div>
+        			<div class="modal-body">
+        				<form class="form-wrap" action="#">								
+							<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
+							<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
+							<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
+							
+							<div class="form-select" id="service-select" style="margin-bottom: 5px;">
+								<select>
+									<option datd-display="">Choose Branch</option>
+									<option value="1">Play School</option>
+									<option value="2">Public School</option>
+									<option value="3">Nursery Training</option>
+									<option value="4">Computer Training</option>
+									<option value="5">Activity Centre</option>
+									<option value="6">Coaching Centres</option>
+								</select>
+							</div>
+							<textarea class="form-control" name="message" placeholder="Type Your Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type Your Message'" ></textarea>									
+							<button class="primary-btn text-uppercase">Submit</button>
+							</form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>	
+  <!-- Apply post Modal -->
+			<div class="modal fade" id="applyforpost" role="dialog">
+    			<div class="modal-dialog modal-lg">    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+        				<h4 class="modal-title">Apply for the Post</h4>
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          					
+        				</div>
+        			<div class="modal-body">
+        				<form class="form-wrap" action="#">								
+							<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
+							<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
+							<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
+							<input type="text" class="form-control" name="name" placeholder="Name of the post" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Name of the post'" >
+							<textarea class="form-control" name="message" placeholder="Type Your Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type Your Message'" ></textarea>									
+							<button class="primary-btn text-uppercase">Submit</button>
+							</form>
+          
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
 			<!-- End footer Area -->	
 
 
