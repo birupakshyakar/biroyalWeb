@@ -89,14 +89,35 @@
 			          </li>
 			          <li class="menu-has-children"><a href="">Download</a>
 			          <ul>
-			              <li><a href="#">Admission Form</a></li>
-			              <li><a href="#">Prospectus</a></li>
-			              <li><a href="#">Franchise Application form</a></li>
-			              <li><a href="#">Franchise Term & Condition</a></li>
-			              <li><a href="#">Job Application</a></li>
-			              <li><a href="#">Certificate</a></li>
+			          		<li><a href="download.html#approval" download>Approval Letter</a></li>
+			          		<li><a href="download.html#JobApplicationFrom" download>Job Application Form</a></li>
+			          		<li class="menu-has-children"><a href="#">Franchise Application Form</a>
+			          		<ul>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Play School</a></li>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Public School</a></li>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Nursery Training</a></li>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Computer Training</a></li>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Activity Centre</a></li>
+			          			<li><a href="download/FranchiseApplicationForm.docx" download>Coaching Centre</a></li>			
+			          		</ul>
+			          		</li>
+			          		<li><a href="#">Franchise Term & Condition</a></li>
+			          		<li class="menu-has-children"><a href="#">Certificate</a>
+			          		<ul>
+			          			<li><a href="#">Play School</a></li>
+			          			<li><a href="#">Public School</a></li>
+			          			<li><a href="#">Nursery Training</a></li>
+			          			<li><a href="#">Computer Training</a></li>
+			          			<li><a href="#">Activity Centre</a></li>
+			          			<li><a href="#">Coaching Centre</a></li>
+			          		</ul>
+			          		<li><a href="download.html#welcome" download>Welcome-kit</a></li>
+			          		
+			              	<li><a href="#">Admission Form</a></li>
+			              	<li><a href="#">Prospectus</a></li>			              	
 			            </ul>
 			           </li>
+			           <li class=""><a href="#">Gallery</a></li>
 			         </ul>
 			      </nav><!-- #nav-menu-container -->		    		
 		    	</div>
@@ -134,7 +155,7 @@
 									<p>
 										We offer the courses of Educational such as play school and public school.Play shool is like preschool for 2 years to 4 years Public school is from kg 1 to 12th in CBSE partern.
 									</p>
-									<a href="#">Join Now</a>									
+									<a class="primary-btn wh" href="#" data-toggle="modal" data-target="#joinModal">Join Now</a>									
 								</div>
 							</div>
 						</div>
@@ -147,7 +168,7 @@
 									<p>
 										We give opportunities for any type of extra curricular Activities such as song, dance, music ,art etc. and offer well coaching for any type of education from 1 to 12 of any board. 
 									</p>
-									<a href="#">Join Now</a>									
+									<a class="primary-btn wh" href="#" data-toggle="modal" data-target="#joinModal">Join Now</a>									
 								</div>
 							</div>
 						</div>
@@ -160,7 +181,7 @@
 									<p>
 										We offer various vocational training such as nursery training and computer courses.In our training the trained student can do job in any organization in the world. 
 									</p>
-									<a href="#">Join Now</a>									
+									<a class="primary-btn wh" href="#" data-toggle="modal" data-target="#joinModal">Join Now</a>									
 								</div>
 							</div>
 						</div>												
@@ -595,7 +616,41 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 			</footer>	
 			<!-- End footer Area -->
 			<!-- End footer Area -->	
-
+<!-- Apply Join Modal -->
+			<div class="modal fade" id="joinModal" role="dialog">
+    			<div class="modal-dialog modal-lg">    
+      			<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+        				<h4 class="modal-title">Join Us</h4>
+          					<button type="button" class="close" data-dismiss="modal">&times;</button>
+          				</div>
+        			<div class="modal-body">
+        				<form class="form-wrap" action="#">								
+							<input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
+							<input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
+							<input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
+							
+						<div class="form-select" id="service-select" style="margin-bottom: 5px; border: 1px solid #ced4da">
+								<select>
+									<option datd-display="">Choose Branch</option>
+									<option value="1">Play School</option>
+									<option value="2">Public School</option>
+									<option value="3">Nursery Training</option>
+									<option value="4">Computer Training</option>
+									<option value="5">Activity Centre</option>
+									<option value="6">Coaching Centres</option>
+								</select>
+							</div>
+							<textarea class="form-control" name="message" placeholder="Type Your Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Type Your Message'" ></textarea>					<button class="primary-btn text-uppercase">Submit</button>
+							</form>
+          		    </div>
+        			<div class="modal-footer">
+          			<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        		</div>
+      		</div>
+      	</div>
+  	</div>
 
 			<script src="js/vendor/jquery-2.2.4.min.js"></script>
 			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
