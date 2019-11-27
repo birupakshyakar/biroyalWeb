@@ -5,3 +5,9 @@
 .footer-area Li a{
 	font-weight: 500;
 }
+
+@media (max-width: 673px)
+#logo {
+    margin-left: 10px !important;
+
+}

@@ -3,10 +3,9 @@ $(document).ready(function() {
 
 
     $(window).scroll(function () {
-       // var Bottom = $('#home').height() + $(window).scrollTop() >= $(document).height();
-        //var scrollTop     = $(window).scrollTop();
-        var elementOffset = $('#home').offset().top;
-       // var distance      = (elementOffset - scrollTop);
+      
+       /* var elementOffset = $('#home').offset().top;
+      
         if(elementOffset < 100)
         {
   
@@ -14,10 +13,18 @@ $(document).ready(function() {
         }
         else if(elementOffset > 100)
         {
-            //alert(distance);
+           
             console.log(elementOffset);
             $('.web-header').show();
-        }
+        }*/
+        if ($(this).scrollTop()>0)
+         {
+            $('.web-header').fadeOut();
+         }
+        else
+         {
+          $('.web-header').fadeIn();
+         }
     });
 
 
