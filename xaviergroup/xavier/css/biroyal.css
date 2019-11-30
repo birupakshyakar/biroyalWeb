@@ -12,11 +12,31 @@
 	}
 	.banner-content{
 	 	margin-top: 0px !important;
+	 	display: block;
 	}
 	 
 	.banner-content p b {
 	 	color: white;
 	 	font-size: 15px;
 	    font-weight: 200;
+	}
+	.cta-two-area .cta-left{
+		text-align: center !important;
+	}
+	.cta-right .cta-left{
+		text-align: center !important;
+	}
+}
+
+@media (max-width: 991px){
+.cta-two-area .cta-right {
+    text-align: center !important;
+    margin-top: 20px;
+}
+}
+
+@media(min-width: 701px){
+	.banner-content{
+		display: none;
 	}
 }
