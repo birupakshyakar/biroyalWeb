@@ -27,7 +27,38 @@ $(document).ready(function() {
          }
     });
 
-
+    $("#displayMemberDiv").click(function() {
+       //alert("Test");
+       var membershipId = $("#inputMembershipId").val();
+       if(membershipId!=""){
+            var sectionIdList =[];
+            $("#Membership").children('section').each(function(i){        
+                if(typeof($(this).attr('id'))!=="undefined"){
+                    sectionIdList[i] = $(this).attr('id');
+                }        
+            console.log(sectionIdList[i]);
+            });
+            var sectionFlag = sectionIdList.includes(membershipId);      
+          // alert(sectionFlag);
+           if(sectionFlag)
+           {
+            $("#"+membershipId).show();
+           }
+           else{
+                alert(" Please enter a Valid Membership Id");
+                $("#inputMembershipId").val("");
+                $("#inputMembershipId").focus();
+           }       
+       }
+       else
+       {
+        alert(" Please enter a value in Membership Id Box");
+        $("#inputMembershipId").focus();
+       }
+       
+       
+       
+    });
     var window_width = $(window).width(),
         window_height = window.innerHeight,
         header_height = $(".default-header").height(),
