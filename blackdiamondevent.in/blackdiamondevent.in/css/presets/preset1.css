@@ -36,7 +36,10 @@ a:hover, a:focus {
 .folio-overview a:hover {
   background-color:#028fcc;
 }
+.wow:hover .service-icon {
 
+	background-color: blueviolet !important;
+}
 .twitter-left-control:hover, 
 .twitter-right-control:hover, 
 .btn-loadmore:hover  {

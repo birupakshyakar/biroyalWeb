@@ -22,8 +22,17 @@
   100% {background-color:red; left:0px; top:0px;}
 }*/
 
-
+.member-info h3{
+  color: blueviolet !important;
+    font-weight: 700 !important;
 }
+.member-info p{
+  font-weight: 400 !important;
+}
+.service-icon i{
+  color: black !important;
+}
+
 .Leftfly{
             /*font-size: 40px;
             height: 40px;*/
