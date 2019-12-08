@@ -21,6 +21,27 @@
   75%  {background-color:green; left:50px; top:200px;}
   100% {background-color:red; left:0px; top:0px;}
 }*/
+@media(min-width: 780px){
+  .lb-outerContainer{
+  width: 708px !important;
+  height: 568px !important;
+  }
+
+.lb-outerContainer img{
+  width: 700px!important;
+  height: 560px !important;
+  }
+}
+@media(min-width: 660px){
+  .lb-outerContainer{
+        width: 625px !important;
+      height: 390px !important;
+  }
+  .lb-outerContainer img{
+  width: 617px!important;
+  height: 382px !important;
+  }
+}
 
 .member-info h3{
   color: blueviolet !important;
@@ -29,8 +50,18 @@
 .member-info p{
   font-weight: 400 !important;
 }
+.service-info h3{
+  color: blueviolet !important;
+  font-weight: 700 !important; 
+}
+.service-info p{
+  font-weight: 400 !important;
+}
 .service-icon i{
   color: black !important;
+}
+.contact-info ul li{
+  font-size: 18px;
 }
 
 .Leftfly{
@@ -702,7 +733,7 @@ section {
 ********Twitter CSS*******
 **************************/
 #twitter {
-  background-image: url(../images/twitter-bg.jpg);
+  background-image: url(../images/twitter-bg.png);
 }
 
 #twitter > div {
