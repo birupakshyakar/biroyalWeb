@@ -33,6 +33,14 @@
 
 /* xs */
 @media (max-width: 767px) {
+	.navbar-brand img{
+		margin-top: 0px !important;
+		height: 80px ;
+	}
+	.transparentDIv {
+		width: 40% !important;
+		margin-left: 35px !important;
+	}
     .project-details{
         margin: 15px;
     }

@@ -13,14 +13,14 @@
   <link href="css/main.css" rel="stylesheet">
   <link id="css-preset" href="css/presets/preset1.css" rel="stylesheet">
   <link href="css/responsive.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/biroyalstyle.css">
+  <!-- <link rel="stylesheet" type="text/css" href="css/biroyalstyle.css"> -->
 
   <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
   <![endif]-->
   
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
   <link rel="shortcut icon" href="images/favicon.ico">
 </head><!--/head-->
 
@@ -42,10 +42,10 @@
             <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand" href="index.html">
-            <h1><img class="img-responsive" src="images/logo.png" alt="logo" width="220px" style="margin-top: -15px;"></h1>
+            <h1><img class="img-responsive" src="images/logo.png" alt="logo" width="220px" style="margin-top: -15px;z-index: 9999999;position: relative;"></h1>
           </a>                    
         </div>
-        <div class="collapse navbar-collapse">
+    <div class="collapse navbar-collapse" style="z-index:1999999;background-color: black;position: relative;">
           <ul class="nav navbar-nav navbar-right" style="margin-top: -2px">                 
             <li class="scroll active"><a href="#home">Home</a></li>
             <li class="scroll"><a href="#services">Service</a></li> 
@@ -58,7 +58,6 @@
         </div>
       </div>
     </div>
-</header>
   <!-- <header id="home"> -->
     <div id="home-slider" class="carousel slide carousel-fade" data-ride="carousel" style="width: 100%">
       <div class="carousel-inner">
@@ -92,7 +91,7 @@
         </div>
         <div class="item" style="background-image: url(images/slider/s5.jpg)">
           <div class="caption">
-            <h1 class="animated fadeInLeftBig"style="font-family: Chiller ;font-size:70px">Make it <span>Memorable</span></h1>
+            <h1 class="animated fadeInLeftBig"style="font-family: Chiller ;font-size:70px">Make it<span>Memorable</span></h1>
             <!-- <p class="animated fadeInRightBig">Bootstrap - Responsive Design - Retina Ready - Parallax</p> -->
             <!-- <a data-scroll class="btn btn-start animated fadeInUpBig" href="#services">Start now</a> -->
           </div>
@@ -143,6 +142,8 @@
               <p>We make sure that the core purpose of conference is served sucessfully wheather information sharing,communicating with audience or training.</p>
             </div>
           </div>
+        </div>
+        <div class="row">
           <div class="col-sm-4 wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="650ms">
             <div class="service-icon">
               <img src="images/portfolio/pre_wedding.png" width="45" height="45">
@@ -1015,7 +1016,7 @@
               <div class="contact-info wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
                 <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p> --><br><br><br><br>
                 <ul class="address"><b>
-                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> Bhubaneswar </li>
+                  <li><i class="fa fa-map-marker"></i> <span> Address:</span> Cuttack </li>
                   <li><a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=blackdiamondevent645@gmail.com"><strong><i class="fa fa-envelope-o faa-pulse animated"></i></strong> blackdiamondevent645@gmail.com</a></li>
                   <li><a href="tel:+919861868849"><strong><i class="fa fa-phone faa-pulse animated"></i></strong> +91-9861868849</a></li>
                   <li><a href="https://wa.me/918917585021"><strong><i class="fa fa-whatsapp faa-pulse animated"></i></strong> +91-8917585021</a></b></li>
@@ -1042,23 +1043,11 @@
         <p>Designed by <a href="https://www.bitwebo.com/" style="color: White">BitWebo</a> Copyright &copy; 2019 Black Diamond Event</p>
       </div>
     </div>
-    <!-- <div class="footer-bottom">
-      <div class="container" style="height: 30px">
-        <div class="row">
-            <div class="col-md-12 col-xs-12">
-              <div class="footer-social">
-                <span><a href="https://twitter.com/BiroyalI"><i class="fa fa-twitter fa-1x" style="color: red"></i></a></span> &nbsp; &nbsp;&nbsp;
-                <span><a href="https://www.facebook.com/blackdiamondjrs"><i class="fa fa-facebook fa-1x" style="color: blue"></i></a> </span><span style="margin-left:150px"> Designed by <a href="https://www.bitwebo.com/" style="color: red">BitWebo</a> Copyright &copy; 2019 Black Diamond Event</span>
-              </div>          
-            </div>
-          </div>
-      </div>
-    </div> -->
-  </footer>
+      </footer>
 
   <script type="text/javascript" src="js/jquery.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+  <!-- <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script> -->
   <script type="text/javascript" src="js/jquery.inview.min.js"></script>
   <script type="text/javascript" src="js/wow.min.js"></script>
   <script type="text/javascript" src="js/mousescroll.js"></script>
@@ -1066,6 +1055,5 @@
   <script type="text/javascript" src="js/jquery.countTo.js"></script>
   <script type="text/javascript" src="js/lightbox.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
-
 </body>
 </html>
