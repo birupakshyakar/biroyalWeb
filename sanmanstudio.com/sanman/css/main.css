@@ -127,6 +127,9 @@ section {
   display: inline-block;
 }
 
+.progress {
+  background-color: blue !important;
+}
 
 /*************************
 ********Home CSS**********
