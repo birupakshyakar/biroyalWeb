@@ -1,12 +1,12 @@
-/*
+/*/*
 FlameViewportScale. 0.12. Facilitates a simple viewport scale query.
 Optic Swerve, opticswerve.com
 Documented at http://menacingcloud.com/?c=viewportScale
-*/
+
 
 /*--------------------------|
 | FlameViewportScale		|
-|--------------------------*/
+|--------------------------
 function FlameViewportScale() {
 	this.delay = 600; // Delay after calling update to account for viewport bounce
 	this.orientation;
@@ -98,4 +98,4 @@ function FlameViewportScale() {
 
 	return true;
 
-}
+}*/

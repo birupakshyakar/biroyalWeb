@@ -224,7 +224,7 @@ img{
   background-color: #ccc;
   display: inline;
   float: left;
-  margin-top: 80px;
+  margin-top: 0px;
   width: 100%;
 }
 .slider_caption {
@@ -617,13 +617,13 @@ div[data-dimension] {
    -ms-transform: translateX(0px);
    transform: translateX(0px);
 }
-.singCourse_imgarea:hover img {
+/*.singCourse_imgarea:hover img {
    -webkit-transform: translateX(100%);
    -moz-transform: translateX(100%);
    -o-transform: translateX(100%);
    -ms-transform: translateX(100%);
    transform: translateX(100%);
-}
+}*/
 .course_more {
   border: 2px solid #fff;
   color: #fff;
