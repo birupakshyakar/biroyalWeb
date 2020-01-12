@@ -132,7 +132,7 @@ img{
 	float: left;
 	display: inline;
 	width: 100%;
-  background-color: #313b3d;	
+  background-color: #0073e6;	
 }
 
 /*--------.menu_area-------- */
@@ -152,7 +152,7 @@ img{
   color: #fff;
 }
 .navbar-default {
-  background-color: #313b3d;
+  background-color: #0073e6;
   border-color: transparent;
 }
 #navbar{overflow-x: hidden;}
@@ -224,7 +224,7 @@ img{
   background-color: #ccc;
   display: inline;
   float: left;
-  margin-top: 80px;
+  margin-top: 0px;
   width: 100%;
 }
 .slider_caption {
@@ -476,7 +476,7 @@ img{
   font-weight: bold;
 }
 .single_whyus_top>p{
-  font-size: 13px;
+  font-size: 14px;
 }
 .whyus_bottom{
   float: left;
@@ -535,6 +535,9 @@ div[data-dimension] {
   font-size: 20px;  
 }
 
+.whyus_icon {
+    background: none repeat scroll 0 0 #0073e6 !important;
+}
 /*--------------------*/
 /* HOME COURSE SECTION */
 /*--------------------*/
@@ -617,13 +620,13 @@ div[data-dimension] {
    -ms-transform: translateX(0px);
    transform: translateX(0px);
 }
-.singCourse_imgarea:hover img {
+/*.singCourse_imgarea:hover img {
    -webkit-transform: translateX(100%);
    -moz-transform: translateX(100%);
    -o-transform: translateX(100%);
    -ms-transform: translateX(100%);
    transform: translateX(100%);
-}
+}*/
 .course_more {
   border: 2px solid #fff;
   color: #fff;
@@ -756,26 +759,26 @@ div[data-dimension] {
   padding-bottom: 15px;
 }
 .tutors_thumb {
-  border-radius: 50%;
+  /*border-radius: 50%;*/
   display: block;
   font-size: 15px;
   height: 165px;
   line-height: 165px;
   margin: 0 auto;
-  padding: 15px 0 0 18px;
+  /*padding: 15px 0 0 18px;*/
   text-align: center;
-  width: 75%;
+  width: 85%;
   -webkit-transition: all 0.5s ease-in-out;
   -o-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
-.single_tutors:hover .tutors_thumb{
+/*.single_tutors:hover .tutors_thumb{
   padding: 0px;
-}
+}*/
 .tutors_thumb > img {
-  border-radius: 50%;
-  height: 150px;
-  width: 95%;
+  /*border-radius: 50%;*/
+  height: 165px;
+  width: 100%;
 }
 .singTutors_content{
   float: left;
@@ -913,7 +916,7 @@ div[data-dimension] {
   float: left;
   display: inline;
   width: 100%;
-  background-color: #1e2223;
+  background-color: #0073e6;
   padding: 60px 0px;
 }
 .single_footer_widget {
@@ -1735,7 +1738,6 @@ div[data-dimension] {
 #purple{
   background-color: #c762cb;
 }
-
 
 /*======================///////////////
 			start responsive style
