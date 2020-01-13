@@ -51,9 +51,12 @@
   font-weight: 400 !important;
 }
 .service-info h3{
-  color: blueviolet !important;
+  color: white !important;
+  background-color: #0073e6;
   font-weight: 700 !important; 
+  border-radius: 10px;
 }
+
 .service-info p{
   font-weight: 400 !important;
 }
@@ -381,7 +384,7 @@ section {
 .our-services .col-sm-4:nth-child(5), 
 .our-services .col-sm-4:nth-child(6) {
   border-bottom:0;
-  padding-top: 60px;
+  padding-top: 0px;
 }
 
 .our-services .col-sm-4:nth-child(3), 
@@ -389,9 +392,7 @@ section {
   border-right:0;
 }
 
-.service-info h3 {
-  margin-top: 35px;
-}
+
 
 /*************************
 ********About CSS*******

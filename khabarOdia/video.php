@@ -7,7 +7,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Khabar Odia (ଖବର ଓଡ଼ିଆ)</title>
+        <title>Khabara Odia (ଖବର ଓଡ଼ିଆ)</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -120,33 +120,18 @@
                                 </div>
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
-                                        <ul class="menu one-page">
-                                        <!-- <?php
-                                            $sql="select id,menuName from menulist";
-                                            $result=mysqli_query($conn, $sql);
-                                            while($row = mysqli_fetch_array($result))
-                                            {
-                                                if($row['id']==1)
-                                                {
-                                                    echo "<li class='active'><a href='#home-area'>".$row['menuName']."</a></li>";
-                                                }
-                                                else
-                                                {
-                                                    echo "<li><a href='#about-area'>".$row['menuName']."</a></li>";
-                                                }
-                                            }
-                                        ?>   --> 
+                                        <ul class="menu one-page">                                        
                                              <li class=''><a href='index.php'>Home</a></li>
-                                             <li class=''><a href='anchalika.php'>ଆଞ୍ଚଳିକ</a></li>
-                                             <li class=''><a href='aparadha.php'>ଅପରାଧ</a></li>
-                                             <li class=''><a href='mukhyakhabar.php'>ମୁଖ୍ୟ ଖବର</a></li>
-                                             <li class=''><a href='rajya.php'>ରାଜ୍ୟ</a></li>
-                                             <li class=''><a href='khela.php'>ଖେଳ</a></li>
-                                             <li class=''><a href='nijukti.php'>ନିଯୁକ୍ତି </a></li>
-                                             <li class=''><a href='manoranjan.php'>ମନୋରଞ୍ଜନ</a></li>
-                                             <li class=''><a href='jatiya.php'>ଜାତୀୟ</a></li>
-                                             <li class=''><a href='video.php'>ଭିଡ଼ିଓ</a></li>
-                                             <li class=''><a href='rajaniti.php'>ରାଜନୀତି</a></li>                                                                            
+                                             <li class='active'><a href='#'>ଆଞ୍ଚଳିକ</a></li>
+                                             <li class=''><a href='#home-area'>ଅପରାଧ</a></li>
+                                             <li class=''><a href='#home-area'>ମୁଖ୍ୟ ଖବର</a></li>
+                                             <li class=''><a href='#home-area'>ରାଜ୍ୟ</a></li>
+                                             <li class=''><a href='#home-area'>ଖେଳ</a></li>
+                                             <li class=''><a href='#home-area'>ନିଯୁକ୍ତି </a></li>
+                                             <li class=''><a href='#home-area'>ମନୋରଞ୍ଜନ</a></li>
+                                             <li class=''><a href='#home-area'>ଜାତୀୟ</a></li>
+                                             <li class=''><a href='#home-area'>ଭିଡ଼ିଓ</a></li>
+                                             <li class=''><a href='#home-area'>ରାଜନୀତି</a></li>                                                                            
                                         </ul>
                                     </nav>
                                 </div>
@@ -167,16 +152,14 @@
                         <div class="row">
                             <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0px 0px 0px 0px">
                                 <div class="col-lg-6 col-md-6">
-                                    <h3>ଭିଡ଼ିଓ</h3>
+                                    <h3>ଆଞ୍ଚଳିକ</h3>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                      <h4 class="pull-right">
                                          <select style="background-color: black;color: white;font-size: 15px">
                                              <option>Latest</option>
-                                             <option>Latest</option>
-                                             <option>Latest</option>
-                                             <option>Latest</option>
-                                             <option>Latest</option>
+                                             <option>popular</option>
+                                             <option>editor</option>                                             
                                          </select>
                                      </h4>
                                 </div>
@@ -184,120 +167,130 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 465px;padding: 0px 0px 5px 0px;">
-                                <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                <div style="margin-top:-105px;background-color: black ">
-                                    <span style="background: black;color: white;padding: 5px;margin-left: 5px;">ଭିଡ଼ିଓ</span>
-                                    <h4 style="color: white;margin-top: 12px;margin-left: 5px;">ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି </h4>
-                                    <h6 style="color: white;margin-left: 5px;"><b>December 26,2019</b></h6>
-                                </div>
-                                
-                                
-                            </div>
-                            <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 465px;padding: 0px;">
-                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                     <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                <div style="margin-top:-105px;background-color: black ">
-                                    <span style="background: black;color: white;padding: 5px;margin-left: 5px;">ଭିଡ଼ିଓ</span>
-                                    <h4 style="color: white;margin-top: 12px;margin-left: 5px;">ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି </h4>
-                                    <h6 style="color: white;margin-left: 5px;"><b>December 26,2019</b></h6>
-                                </div>
-                                </div>
-                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                     <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                <div style="margin-top:-105px;background-color: black ">
-                                    <span style="background: black;color: white;padding: 5px;margin-left: 5px;">ଭିଡ଼ିଓ</span>
-                                    <h4 style="color: white;margin-top: 12px;margin-left: 5px;">ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି </h4>
-                                    <h6 style="color: white;margin-left: 5px;"><b>December 26,2019</b></h6>
-                                </div>
-                                </div>
-                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 220px;/* width: 49%; *//* margin-right: 4px; */padding: 0px 0px 0px 5px;">
-                                     <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                <div style="margin-top:-105px;background-color: black ">
-                                    <span style="background: black;color: white;padding: 5px;margin-left: 5px;">ଭିଡ଼ିଓ</span>
-                                    <h4 style="color: white;margin-top: 12px;margin-left: 5px;">ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି </h4>
-                                    <h6 style="color: white;margin-left: 5px;"><b>December 26,2019</b></h6>
-                                </div>
-                                </div>
-                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 220px;/* width: 49%; *//* margin-left: 4px; */padding: 0px 0px 0px 5px;">
-                                     <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                <div style="margin-top:-105px;background-color: black;padding:0px; ">
-                                    <span style="background: black;color: white;padding: 5px;margin-left: 5px;">ଭିଡ଼ିଓ</span>
-                                    <h4 style="color: white;margin-top: 12px;margin-left: 5px;">ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି </h4>
-                                    <h6 style="color: white;margin-left: 5px;"><b>December 26,2019</b></h6>
-                                </div>
-                                </div>
-                            </div>                            
+                            <?php
+                            $sql="select * from newslist where category='ଭିଡ଼ିଓ' order by id desc limit 5";
+                                $result = mysqli_query($conn, $sql);
+                                $row_cnt = $result->num_rows;
+                              
+                                for($i=1; $i<=$row_cnt; $i++)
+                                {
+                                  $row=mysqli_fetch_assoc($result);
+                                  if($i==1){
+                                        echo '
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12 viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                                    
+                                                    <img src="'.$row["image"].'" style="height: 100%;width: 100%">
+                                                    <div style="margin-top:-105px;background-color: black ">
+                                                        <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
+                                                        <h4 style="color: white;margin-top: 12px;margin-left: 5px;">'.$row["heading"].'</h4>
+                                                        <h6 style="color: white;margin-left: 5px;"><b>'.$row["date"].'</b></h6>
+                                                    </div>
+                                                    
+                                                    <p class="news_id" style="display:none">'.$row["id"].'</p>
+                                                </div>';
+                                  }
+                                  if($i==2){
+                                        echo '
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12 viewDetail  " style="height: 465px;padding: 0px;">
+                                                    <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
+                                                       
+                                                         <img src="'.$row["image"].'" style="height: 100%;width: 100%">
+                                                        <div style="margin-top:-105px;background-color: black ">
+                                                            <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
+                                                            <h4 style="color: white;margin-top: 12px;margin-left: 5px;">'.$row["heading"].'</h4>
+                                                            <h6 style="color: white;margin-left: 5px;"><b>'.$row["date"].'</b></h6>
+                                                        </div>
+                                                         <p class="news_id" style="display:none">'.$row["id"].'</p>
+                                                    </div>';
+                                  }
+                                  if($i==3){
+                                        echo '
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12 viewDetail " style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
+                                                        <p class="news_id" style="display:none">'.$row["id"].'</p>
+                                                         <img src="'.$row["image"].'" style="height: 100%;width: 100%">
+                                                        <div style="margin-top:-105px;background-color: black ">
+                                                            <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
+                                                            <h4 style="color: white;margin-top: 12px;margin-left: 5px;">'.$row["heading"].'</h4>
+                                                            <h6 style="color: white;margin-left: 5px;"><b>'.$row["date"].'</b></h6>
+                                                        </div>
+                                                    </div>';
+                                  }
+                                  if($i==4){
+                                        echo '
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
+                                                         <img src="'.$row["image"].'" style="height: 220px;width: 100%">
+                                                        <div style="margin-top:-105px;background-color: black ">
+                                                            <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
+                                                            <h4 style="color: white;margin-top: 12px;margin-left: 5px;">'.$row["heading"].'</h4>
+                                                            <h6 style="color: white;margin-left: 5px;"><b>'.$row["date"].'</b></h6>
+                                                        </div>
+                                                    </div>';
+                                  }
+                                  if($i==5){
+                                        echo '
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
+                                                         <img src="'.$row["image"].'" style="height: 220px;width: 100%">
+                                                        <div style="margin-top:-105px;background-color: black ">
+                                                            <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
+                                                            <h4 style="color: white;margin-top: 12px;margin-left: 5px;">'.$row["heading"].'</h4>
+                                                            <h6 style="color: white;margin-left: 5px;"><b>'.$row["date"].'</b></h6>
+                                                        </div>
+                                                    </div>
+                                                </div>';
+                                  }
+
+                                }                            
+                            ?>                           
                         </div>
                         <div class="row" style="margin-top: 50px">
-                            <div class="col-lg-8 col-md-8 col-sm-12">
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;">
-                                   <img src="img/photo4.jpg" style="height: 180px;width: 100%"> 
-                                   <h3>ବିଲେଇ ଆଖି ବୁଜି କ୍ଷୀର ପିଉଚି</h3>
-                                   <h6><b>December 26,2019</b></h6>
-                                </div>
+                            <div class="col-lg-8 col-md-8 col-sm-12 p-0">
+                                <?php 
+
+                             
+                                    $sql="select * from newslist where category='ଭିଡ଼ିଓ' order by date desc,id asc";// where sub_category='breaking_news' id desc limit 4";
+                                    $result = mysqli_query($conn, $sql);
+                                    $row_cnt = $result->num_rows;
+                                   // echo $row_cnt;
+                                    while ( $row=mysqli_fetch_array($result)) {
+                                        echo '<div class="col-lg-6 col-md-6 col-sm-12 viewDetail " onclick="openNewsDetails('.$row["id"].')" style="height: 240px;padding: 0px 0px 5px 5px;">
+                                               <img src="'.$row["image"].'" style="height: 180px;width: 100%"> 
+                                               <h3>'.$row["heading"].'</h3>
+                                               <h6><b>'.$row["date"].'</b></h6>
+                                            </div>';
+                                    }
+
+                                ?>
+                                
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-12">
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;border:1px solid #ccc">
-                                    <p>Advertisement Area</p>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;border:1px solid #ccc">
-                                    <p>Advertisement Area</p>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;border:1px solid #ccc">
-                                    <p>Advertisement Area</p>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;border:1px solid #ccc">
-                                    <p>Advertisement Area</p>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;border:1px solid #ccc">
-                                    <p>Advertisement Area</p>
-                                </div>
+                                <?php 
+
+                             
+                                    $sql="select * from advertisementList where category='ଭିଡ଼ିଓ' limit 4";// where sub_category='breaking_news' id desc limit 4";
+                                    $result = mysqli_query($conn, $sql);
+                                    $row_cnt = $result->num_rows;
+                                   // echo $row_cnt;
+                                    for ($i=0; $i < $row_cnt; $i++) { 
+                                        # code...
+                                        $row=mysqli_fetch_array($result);
+                                        if($i==0)
+                                        {
+                                            echo '<div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px; padding: 0px 0px 5px 5px;border:1px solid #ccc">
+                                                <p class="p-0 m-0">Advertisement Area</p>
+                                                <img src="'.$row["image"].'" style="height:200px;width:100%">
+                                            </div>';
+                                        }
+                                        else
+                                        {
+                                            echo '<div class="col-lg-12 col-md-12 col-sm-12 text-center" style="height: 240px;margin-top:20px; padding: 0px 0px 5px 5px;border:1px solid #ccc">
+                                                <p class="p-0 m-0">Advertisement Area</p>
+                                                <img src="'.$row["image"].'" style="height:200px;width:100%">
+                                            </div>';
+                                        }
+                                    }
+                                    
+                                ?>
+                                
                             </div>
 
                             
@@ -316,97 +309,71 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <h3>Editor Pick</h3>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
+                                <?php
+                                        $sql="select * from newslist where subcategory='editor' order by id desc limit 3";// where sub_category='breaking_news' id desc limit 4";
+                                        $result = mysqli_query($conn, $sql);
+                                        $row_cnt = $result->num_rows;
+                                       // echo $row_cnt;
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                                        <img src="'.$row["image"].'">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-12">
+                                                        <h4>'.$row["heading"].'</h4>
+                                                        <h6><b>'.$row["date"].'</b></h6>
+                                                    </div>
+                                                </div><br>';
+                                        }                                       
+                                        
+                                    ?>
+
+                           
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                             <h3>Popular Pick</h3>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଭିଡ଼ିଓ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
+                            <?php
+                                        $sql="select * from newslist where subcategory='popular' order by id desc limit 3";// where sub_category='breaking_news' id desc limit 4";
+                                        $result = mysqli_query($conn, $sql);
+                                        $row_cnt = $result->num_rows;
+                                       // echo $row_cnt;
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                                    <div class="col-lg-4 col-md-4 col-sm-12">
+                                                        <img src="'.$row["image"].'">
+                                                    </div>
+                                                    <div class="col-lg-8 col-md-8 col-sm-12">
+                                                        <h4>'.$row["heading"].'</h4>
+                                                        <h6><b>'.$row["date"].'</b></h6>
+                                                    </div>
+                                                </div><br>';
+                                        }                                       
+                                        
+                                    ?>
+                            
                             
                            
                         </div>
                         <div class="col-lg-4 col-md-4 col-sm-12">
                              <h3>Popular Category</h3>
                              <div class="row">
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
+                                <?php
+                                        $sql="SELECT count(*) as counter, category, id FROM `newslist` GROUP BY category order by counter desc";// where sub_category='breaking_news' id desc limit 4";
+                                        $result = mysqli_query($conn, $sql);
+                                        $row_cnt = $result->num_rows;
+                                       // echo $row_cnt;
+                                        while($row=mysqli_fetch_assoc($result))
+                                        {
+                                            echo '<div class="col-12 " style="padding: 10px">
+                                                        <span>'.$row["category"].'</span>
+                                                        <span class="pull-right">'.$row["counter"].'</span>
+                                                    </div>';
+                                        }                                       
+                                        
+                                    ?>
+                               
                                  
                              </div>
                         </div>
@@ -419,7 +386,7 @@
                                 <h3>KhabaraOdia</h3>
                             </div>
                             <div class="footer-icon">
-                               <!--  <p>There are many variations of passages of Lorem Ipsum available,<br> but the majority have suffered alteration in </p> -->
+                                <!-- <p>There are many variations of passages of Lorem Ipsum available,<br> but the majority have suffered alteration in </p> -->
                                 <ul>
                                     <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
@@ -430,8 +397,7 @@
                                 <span>
                                     Copyright©
                                     KhabaraOdia</a>
-                                    2020.All right reserved. Made By 
-                                    <a href="www.bitwebo.com">Bitwebo</a>
+                                    2020.All right reserved.
                                 </span>
                             </div>
                         </div>
@@ -462,5 +428,15 @@
         <!-- main JS
         ============================================ -->        
         <script src="js/main.js"></script>
+        <script src="js/biroyal.js"></script>
+       <!--  <script type="text/javascript">
+            function openNewsDetails(id){
+                var idValue=id;
+                alert(" test id is : "+idValue);
+                var data1= { id : idValue };
+                alert(JSON.stringify(data1));
+                document.location.href = 'news_detail.php?news_details_value='+idValue;               
+            }
+        </script> -->
     </body>
 </html>
