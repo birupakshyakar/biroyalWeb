@@ -121,17 +121,17 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">                                        
-                                             <li class=''><a href='index.php'>Home</a></li>
-                                             <li class='active'><a href='#'>ଆଞ୍ଚଳିକ</a></li>
-                                             <li class=''><a href='#home-area'>ଅପରାଧ</a></li>
-                                             <li class=''><a href='#home-area'>ମୁଖ୍ୟ ଖବର</a></li>
-                                             <li class=''><a href='#home-area'>ରାଜ୍ୟ</a></li>
-                                             <li class=''><a href='#home-area'>ଖେଳ</a></li>
-                                             <li class=''><a href='#home-area'>ନିଯୁକ୍ତି </a></li>
-                                             <li class=''><a href='#home-area'>ମନୋରଞ୍ଜନ</a></li>
-                                             <li class=''><a href='#home-area'>ଜାତୀୟ</a></li>
-                                             <li class=''><a href='#home-area'>ଭିଡ଼ିଓ</a></li>
-                                             <li class=''><a href='#home-area'>ରାଜନୀତି</a></li>                                                                            
+                                             <li class='active'><a href='index.html'>Home</a></li>
+                                             <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
+                                             <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
+                                             <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
+                                             <li class=''><a href='state.php'>ରାଜ୍ୟ</a></li>
+                                             <li class=''><a href='sports.php'>ଖେଳ</a></li>
+                                             <li class=''><a href='employment.php'>ନିଯୁକ୍ତି </a></li>
+                                             <li class=''><a href='entertainment.php'>ମନୋରଞ୍ଜନ</a></li>
+                                             <li class=''><a href='national.php'>ଜାତୀୟ</a></li>
+                                             <li class=''><a href='video.php'>ଭିଡ଼ିଓ</a></li>
+                                             <li class=''><a href='politics.php'>ରାଜନୀତି</a></li>                                                                           
                                         </ul>
                                     </nav>
                                 </div>
@@ -152,7 +152,7 @@
                         <div class="row">
                             <div class="col-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding: 0px 0px 0px 0px">
                                 <div class="col-lg-6 col-md-6">
-                                    <h3>ଆଞ୍ଚଳିକ</h3>
+                                    <h3>ରାଜ୍ୟ</h3>
                                 </div>
                                 <div class="col-lg-6 col-md-6">
                                      <h4 class="pull-right">
