@@ -129,10 +129,17 @@
                 break;
             }
         }
-        
+    
+
         newDate = day+month+dateYear;
-    window.onload = function(){        
-        document.getElementById("currentDate").innerHTML = newDate;
+    window.onload = function(){  
+    var today = new Date();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();      
+        document.getElementById("currentDate").innerHTML = newDate + " - " + time;
+     
+        
+        
+    
     }
     
     /*--
