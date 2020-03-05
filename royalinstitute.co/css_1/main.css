@@ -42,7 +42,12 @@
   height: 382px !important;
   }
 }
-
+.navbar{
+  z-index: 999;  
+}
+.navbar ul{
+  background-color: #0073e6 !important;
+}
 .member-info h3{
   color: blueviolet !important;
     font-weight: 700 !important;
