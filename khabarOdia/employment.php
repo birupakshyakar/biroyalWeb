@@ -75,11 +75,11 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
-                <li>About</li>
+                <li><a href="about.html">About</a></li>
                 <li>Reporters Panel</li>
                 <li>Contact Us</li>
             </ul>
@@ -87,29 +87,13 @@
         </header>
         <div class="wrapper">
             <header class="header-area">
-                <!-- <div class="container">
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-12 col-lg-12 col-md-12 col-sm-12">
-                            <h3>KhabarOdia</h3>
-                        </div>
-                        <
-                    </div>
-                    
-                </div> -->
+               
                 <!-- Menu Area
                 ============================================ -->
                  <div id="main-menu" class="sticker" style="color: black">
                     <div class="container">
                         <div class="row">
-                            <!-- <div class="col-md-12 col-xs-12">
-                                <div class="logo float-left navbar-header">
-                                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
-                                        <i class="fa fa-bars menu-open"></i>
-                                        <i class="fa fa-times menu-close"></i>
-                                    </button>
-                                    <a class="navbar-brand" href="index.html"><h3>Khabar Odia</h3></a>                         
-                                </div>
-                            </div> -->
+                            
                             <div class="col-md-12 col-xs-12">
                                 <div class="logo float-left navbar-header">
                                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
@@ -121,13 +105,13 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">                                        
-                                             <li class='active'><a href='index.html'>Home</a></li>
+                                             <li class=''><a href='index.php'>Home</a></li>
                                              <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
                                              <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
                                              <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
                                              <li class=''><a href='state.php'>ରାଜ୍ୟ</a></li>
                                              <li class=''><a href='sports.php'>ଖେଳ</a></li>
-                                             <li class=''><a href='employment.php'>ନିଯୁକ୍ତି </a></li>
+                                             <li class='active'><a href='employment.php'>ନିଯୁକ୍ତି </a></li>
                                              <li class=''><a href='entertainment.php'>ମନୋରଞ୍ଜନ</a></li>
                                              <li class=''><a href='national.php'>ଜାତୀୟ</a></li>
                                              <li class=''><a href='video.php'>ଭିଡ଼ିଓ</a></li>
@@ -154,7 +138,7 @@
                                 <div class="col-lg-6 col-md-6">
                                     <h3>ନିଯୁକ୍ତି</h3>
                                 </div>
-                                <div class="col-lg-6 col-md-6">
+                                <!-- <div class="col-lg-6 col-md-6">
                                      <h4 class="pull-right">
                                          <select style="background-color: black;color: white;font-size: 15px">
                                              <option>Latest</option>
@@ -162,11 +146,11 @@
                                              <option>editor</option>                                             
                                          </select>
                                      </h4>
-                                </div>
+                                </div> -->
                                 
                             </div>
                         </div>
-                        <div class="row">
+                        <!-- <div class="row">
                             <?php
                             $sql="select * from newslist where category='ନିଯୁକ୍ତି' order by id desc limit 5";
                                 $result = mysqli_query($conn, $sql);
@@ -217,7 +201,7 @@
                                   }
                                   if($i==4){
                                         echo '
-                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
+                                                <div class="col-6 col-lg-6 col-md-6 col-sm-12 pointerDiv" style="height: 240px;/* margin-bottom:5px; */padding: 0px 0px 5px 5px;" onclick="openNewsDetails('.$row["id"].')">
                                                          <img src="'.$row["image"].'" style="height: 220px;width: 100%">
                                                         <div style="margin-top:-105px;background-color: black ">
                                                             <span style="background: black;color: white;padding: 5px;margin-left: 5px;">'.$row["category"].'</span>
@@ -296,7 +280,8 @@
                             
                             
                             
-                        </div>                       
+                        </div>  -->  
+                        <div class="text-center" style="height: 500px"><h2 style="margin-top: 200px">Coming Soon ...</h2></div>                    
                     </div>
                 </div>
             </div>
@@ -316,7 +301,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>
@@ -340,7 +325,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>

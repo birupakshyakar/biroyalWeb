@@ -1,11 +1,20 @@
 <?php
     include 'connection/database_connection.php';
     $conn = OpenCon();
+    session_start();
+    //echo $_SESSION['user_type'];  
+   
+    if(!isset($_SESSION['user_type']))
+        {
+            //echo "Test ";
+            header('Location: login.php');
+        }
+        
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Khabara Odia (ଖବର ଓଡ଼ିଆ)</title>
         <meta name="description" content="">
@@ -75,7 +84,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
@@ -87,15 +96,7 @@
         </header>
         <div class="wrapper">
             <header class="header-area">
-                <!-- <div class="container">
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-12 col-lg-12 col-md-12 col-sm-12">
-                            <h3>KhabarOdia</h3>
-                        </div>
-                        <
-                    </div>
-                    
-                </div> -->
+               
                 <!-- Menu Area
                 ============================================ -->
                  <div id="main-menu" class="sticker" style="color: black">
@@ -123,7 +124,7 @@
                                         <ul class="menu one-page">
                                         
                                              <li class=''><a href='index.php'>Home</option>
-                                             <li class='active'><a href='#'>admin</option>                                                                                                                   
+                                             <a href="logout.php"><li class='logout' ><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</li></a>                                                                                                                   
                                         </ul>
                                     </nav>
                                 </div>
@@ -140,14 +141,27 @@
             ============================================ -->
             <div id="service-area">
                 <div class="ptb-120">
-                    <div class="container">
-                        <div class="row">                
-                            <div class="col-lg-12 col-md-12 col-sm-12">
-                                <div class="col-lg-6 col-md-6">
+                    <div class="container">                        
+                        <div class="row" style="display:<?php if($_SESSION['user_type'] =='admin') echo 'block'; else echo 'none'; ?>;" id="new_user_panel">
+                          <div class="col-lg-4 col-md-4"> <h2>Create new user</h2><hr> 
+                            <input type="text" name="" placeholder="Name" id="name" style="width: 100%;height: 40px"><br><br>
+                            <input type="text" name="" placeholder="Userid" id="userid" style="width: 100%;height: 40px"><br><br>
+                            <input type="text" name=""placeholder ="password" id="user_password" style="width: 100%;height: 40px"><br><br>
+                            <input type="email" name="" placeholder="Emailid" id="email" style="width: 100%;height: 40px"><br><br>
+                            <select id="user_type" style="width: 100%;height: 40px">
+                                <option hidden="hidden">select</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
+                            </select>
+                            <button class="submit" id="userSubmit">Submit</button>
+                          </div>
+                        </div>
+                        <div class="row" style="display: block; padding: 0px;margin-top: 20px" id="news_insert_panel">                
+                            <div class="col-lg-12 col-md-12 col-sm-12"><h2>Insert News</h2><hr>
+                                <div class="col-lg-8 col-md-8" style="padding: 0px">
                                     <label>Section</label><br>
-                                    <select  class="dropdownStyle" name="section_name" id="section_name" style="width: 100%">
-                                        <option  hidden="hidden">select</option>
-                                      
+                                    <select  class="dropdownStyle" name="news_section_name" id="news_section_name" style="width: 100% !important">
+                                        <option  hidden="hidden">select</option>                                      
                                         <option value="ଆଞ୍ଚଳିକ">ଆଞ୍ଚଳିକ</option>
                                          <option value="ଅପରାଧ">ଅପରାଧ</option>
                                          <option value="ମୁଖ୍ୟ ଖବର">ମୁଖ୍ୟ ଖବର</option>
@@ -159,142 +173,61 @@
                                          <option value="ଭିଡ଼ିଓ">ଭିଡ଼ିଓ</option>
                                          <option value="ରାଜନୀତି">ରାଜନୀତି</option> 
                                     </select>
-                                    <label>Upload Image</label><br>
-                                    <input type="file" name="image_path" id="image_path">
-                                    <label>News Title</label><br>
-                                    <input type="text" name="news_title" id="news_title" class="dropdownStyle" style="width: 100%">
-                                    <label>News Date</label><br>
-                                    <input type="date" name="news_date" id="news_date" class="dropdownStyle" style="width: 100%" value="<?php echo date('Y-m-d'); ?>">
-                                </div>
-                                <div class="col-lg-6 col-md-6">
-                                    <label>Category</label><br>
-                                    <select name="catagory_name" id="catagory_name" class="dropdownStyle" style="width: 100%">
-                                        <option  hidden="hidden">select</option>
-                                        <option value="breaking_news">Breaking News</option>
-                                        <option value="popular">Popular</option>
-                                        <option value="editor">Editor Pick</option>
-                                    </select> 
-                                    <label>News Content</label><br>
-                                    <textarea style="height: 200px;width: 100%" id="news_content"></textarea> 
-                                </div>                      
-                                
-                            </div>
-                           
-                            <div class="col-lg-3 col-md-3 col-sm-12 pull-right">
-                                <button onclick="fncn();" class="submit">Submit</button>
-                                <!-- <button>Submit</button> -->
-                                <p id="response"></p>
-                            </div>               
-                        </div>
-                                              
+                                    <div id="news-entry-section" style="display:none ">
+                                        <label>Cover Image</label><br>
+                                        <input type="file" name="image_path" id="image_path">
+                                        <label>Other Images</label><br>
+                                        <input type="file" name="multiple_image_path[]" id="multiple_image_path" multiple="multiple">
+                                        <label>News Title</label><br>
+                                        <input type="text" name="news_title" id="news_title" class="dropdownStyle" style="width: 100%">
+                                        <label>News Date</label><br>
+                                        <input type="date" name="news_date" id="news_date" class="dropdownStyle" style="width: 100%" value="<?php echo date('Y-m-d'); ?>">
+                                        <div class="">
+                                            <label>Category</label><br>
+                                            <select name="catagory_name" id="catagory_name" class="dropdownStyle" style="width: 100%">
+                                                <option  hidden="hidden">select</option>
+                                                <option value="breaking_news">Breaking News</option>
+                                                <option value="popular">Popular</option>
+                                                <option value="editor">Editor Pick</option>
+                                            </select> 
+                                            <label>News Content</label><br>
+                                            <textarea style="height: 200px;width: 100%" id="news_content"></textarea> 
+                                        </div>
+                                        <div class="">
+                                            <button onclick="fncn();" class="submit">Submit</button>
+                                            <!-- <button>Submit</button> -->
+                                            <p id="response"></p>
+                                        </div>
+                                    </div>
+                                    <div id="video-upload" style="display:none">
+                                        <label>Video Title</label><br>
+                                        <input type="text" name="video_title" id="video_title" class="dropdownStyle" style="width: 100%">
+                                        <label>Youtube Video link</label><br>
+                                        <input type="text" name="video_link" id="video_link" class="dropdownStyle" style="width: 100%">
+                                        <button onclick="fncnVideo();" class="submit">Submit</button> <br>
+                                        <p id="responseVideo"></p>            
+                                    </div>
+                                    <div id="job-upload" style="display:none">
+                                        <label>Post Name</label><br>
+                                        <input type="text" name="post_name" id="post_name" class="dropdownStyle" style="width: 100%">
+                                        <label>No. of vacancy</label><br>
+                                        <input type="text" name="vacancy_no" id="vacancy_no" class="dropdownStyle" style="width: 100%">
+                                        <label>Job Location</label><br>
+                                        <input type="text" name="job_location" id="job_location" class="dropdownStyle" style="width: 100%">
+                                        <label>Job Description</label><br>
+                                        <input type="text" name="job_description" id="job_description" class="dropdownStyle" style="width: 100%">
+                                        <button onclick="fncnJob();" class="submit">Submit</button> <br>
+                                        <p id="responsejob"></p>              
+                                    </div>                                    
+                                </div>                                
+                            </div>                                           
+                        </div>                                              
                     </div>
                 </div>
-            </div>
-            
-            
-            <!-- footer area
-            ============================================ -->
+            </div>            
+            <!-- footer area -->
             <footer class="footer-area pt-100">
-                <div class="container">
-                    <!-- <div class="row">
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <h3>Editor Pick</h3>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                            <h3>Popular Pick</h3>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            <br>
-                            <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-12">
-                                    <img src="img/photo4.jpg">
-                                </div>
-                                <div class="col-lg-8 col-md-8 col-sm-12">
-                                    <h4> ଆଞ୍ଚଳିକ ଖବର ବଡ ଜବର </h4>
-                                    <h6><b>December 30, 2019</b></h6>
-                                </div>
-                            </div>
-                            
-                           
-                        </div>
-                        <div class="col-lg-4 col-md-4 col-sm-12">
-                             <h3>Popular Category</h3>
-                             <div class="row">
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                <div class="col-12" style="padding: 10px">
-                                    <span>Test</span>
-                                    <span class="pull-right">1222</span>
-                                </div>
-                                 
-                             </div>
-                        </div>
-                        
-                    </div><br><br> -->
+                <div class="container">                    
                     <div class="row text-center">
                        <div class="col-md-12 text-center">
                         <div class="footer-all">
@@ -304,15 +237,15 @@
                             <div class="footer-icon">
                                <!--  <p>There are many variations of passages of Lorem Ipsum available,<br> but the majority have suffered alteration in </p> -->
                                 <ul>
-                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></option>
-                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></option>
-                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></option>                                    
+                                    <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                    <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>                                  
                                 </ul>
                             </div>
                             <div class="footer-text">
                                 <span>
                                     Copyright©
-                                    KhabaraOdia</a>
+                                    <a href="index.php">KhabaraOdia</a>
                                     2020.All right reserved.
                                 </span>
                             </div>
@@ -348,59 +281,7 @@
         <!-- main JS
         ============================================ -->        
         <script src="js/main.js"></script>
-        <script type="text/javascript">
-                var filename;
-                $('#image_path').change(function() {
-                    filename = $('#image_path').val();
-                    filename = filename.replace(/.*[\/\\]/, '');
-                    //alert(filename);
-                });
-
-                        
-                function fncn(){
-                       
-                    var section_name = document.getElementById("section_name").value;
-                    var catagory_name = document.getElementById("catagory_name").value;                   
-                    var news_title = document.getElementById("news_title").value;
-                    var news_content = document.getElementById("news_content").value;
-                    var news_date = document.getElementById("news_date").value;
-
-                   
-                    var file_data = $('#image_path').prop('files')[0];   
-                    var form_data = new FormData();                  
-                    form_data.append('file', file_data);
-                    form_data.append('section', section_name);
-                    form_data.append('news_title', news_title);
-                    form_data.append('news_content', news_content);
-                    form_data.append('news_date', news_date);
-                    form_data.append('catagory_name', catagory_name);
-                    //alert(form_data);  
-                    console.log(JSON.stringify(form_data));
-                    //alert(JSON.stringify(form_data));
-
-                    for (var value of form_data.values()) {
-                       console.log(value); 
-                    }                  
-                     $.ajax({
-                        url: "insert_news.php",
-                        type: "POST",
-                        data: form_data ,
-                        cache: false,
-                        contentType: false,
-                        processData: false,
-                        dataType: 'text',
-                        enctype : 'multipart/form-data' ,
-                        success: function (data) {
-                                //alert(data);
-                                $("#response").text(data);
-                                //console.log(data.abc);
-                           // You will get response from your PHP page (what you echo or print)
-                        }   
-                    });
-                    
-
-                
-            }
-            </script>
+        <script src="js/biroyal.js"></script>
+       
     </body>
 </html>

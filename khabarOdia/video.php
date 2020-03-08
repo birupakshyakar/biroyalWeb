@@ -75,7 +75,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
@@ -121,7 +121,7 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">                                        
-                                             <li class='active'><a href='index.html'>Home</a></li>
+                                             <li class=''><a href='index.html'>Home</a></li>
                                              <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
                                              <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
                                              <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
@@ -130,7 +130,7 @@
                                              <li class=''><a href='employment.php'>ନିଯୁକ୍ତି </a></li>
                                              <li class=''><a href='entertainment.php'>ମନୋରଞ୍ଜନ</a></li>
                                              <li class=''><a href='national.php'>ଜାତୀୟ</a></li>
-                                             <li class=''><a href='video.php'>ଭିଡ଼ିଓ</a></li>
+                                             <li class='active'><a href='video.php'>ଭିଡ଼ିଓ</a></li>
                                              <li class=''><a href='politics.php'>ରାଜନୀତି</a></li>                                                                            
                                         </ul>
                                     </nav>

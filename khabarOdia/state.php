@@ -75,7 +75,7 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
@@ -121,11 +121,11 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">                                        
-                                             <li class='active'><a href='index.html'>Home</a></li>
+                                             <li class=''><a href='index.php'>Home</a></li>
                                              <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
                                              <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
                                              <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
-                                             <li class=''><a href='state.php'>ରାଜ୍ୟ</a></li>
+                                             <li class='active'><a href='state.php'>ରାଜ୍ୟ</a></li>
                                              <li class=''><a href='sports.php'>ଖେଳ</a></li>
                                              <li class=''><a href='employment.php'>ନିଯୁକ୍ତି </a></li>
                                              <li class=''><a href='entertainment.php'>ମନୋରଞ୍ଜନ</a></li>
@@ -316,7 +316,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>
@@ -340,7 +340,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>

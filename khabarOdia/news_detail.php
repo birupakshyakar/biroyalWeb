@@ -3,16 +3,28 @@
     $conn = OpenCon();
 
     $actual_link = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-  //  echo $actual_link;
+   //echo $actual_link;
+    $text = urlencode($actual_link);
     $url_components = parse_url($actual_link);
     parse_str($url_components['query'], $params);
     $news_id = $params['news_details_value'];
    // echo ' ID is '.$params['news_details_value'];
+    $sql="SELECT * FROM `newslist` where id=".$news_id;
+    $result = mysqli_query($conn, $sql);
+    $row_cnt = $result->num_rows;
+    // echo $row_cnt;
+    $row=mysqli_fetch_assoc($result);
     
 ?>
 <!doctype html>
 <html class="no-js" lang="zxx">
     <head>
+        <meta property="og:site_name" content="www.khabarodia.com">
+        <meta property="og:title" content="<?php echo $row['heading']; ?>" />
+        <meta property="og:description" content="<?php echo $row['heading']; ?>" />
+        <meta property="og:image" itemprop="image" content="http://www.khabarodia.com/<?php echo $row['image']; ?>">
+        <meta property="og:type" content="website" />
+        
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Khabara Odia (ଖବର ଓଡ଼ିଆ)</title>
@@ -71,19 +83,23 @@
         <!-- modernizr JS
         ============================================ -->        
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-        <script type="text/javascript">
-            
-
-       // document.getElementById("currentDate").innerHTML=date;
-    
-        </script>
+        <style type="text/css">
+            .next_article{
+                text-align: right;
+            }
+           @media only screen and (max-width: 600px){
+            .next_article{
+                text-align: left;
+            }
+           }
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
@@ -109,15 +125,7 @@
                  <div id="main-menu" class="sticker" style="color: black">
                     <div class="container">
                         <div class="row">
-                            <!-- <div class="col-md-12 col-xs-12">
-                                <div class="logo float-left navbar-header">
-                                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
-                                        <i class="fa fa-bars menu-open"></i>
-                                        <i class="fa fa-times menu-close"></i>
-                                    </button>
-                                    <a class="navbar-brand" href="index.html"><h3>Khabar Odia</h3></a>                         
-                                </div>
-                            </div> -->
+                            
                             <div class="col-md-12 col-xs-12">
                                 <div class="logo float-left navbar-header">
                                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
@@ -129,22 +137,8 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">
-                                        <!-- <?php
-                                            $sql="select id,menuName from menulist";
-                                            $result=mysqli_query($conn, $sql);
-                                            while($row = mysqli_fetch_array($result))
-                                            {
-                                                if($row['id']==1)
-                                                {
-                                                    echo "<li class='active'><a href='#home-area'>".$row['menuName']."</a></li>";
-                                                }
-                                                else
-                                                {
-                                                    echo "<li><a href='#about-area'>".$row['menuName']."</a></li>";
-                                                }
-                                            }
-                                        ?>   --> 
-                                             <li class='active'><a href='index.html'>Home</a></li>
+                                       
+                                             <li class='active'><a href='index.php'>Home</a></li>
                                              <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
                                              <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
                                              <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
@@ -175,37 +169,74 @@
                         <div class="row">
                             <div class="col-lg-9 col-md-9 col-sm-12">
                                 <?php
-                                        $sql="SELECT * FROM `newslist` where id=".$news_id;// where sub_category='breaking_news' id desc limit 4";
-                                        $result = mysqli_query($conn, $sql);
-                                        $row_cnt = $result->num_rows;
-                                       // echo $row_cnt;
-                                        $row=mysqli_fetch_assoc($result);
+                                    $sql="SELECT * FROM `newslist` where id=".$news_id;
+                                    $result = mysqli_query($conn, $sql);
+                                    $row_cnt = $result->num_rows;
+                                     // echo $row_cnt;
+                                     $row=mysqli_fetch_assoc($result);
+                                     $otherImages = $row['other_images'];
+                                     //echo $otherImages;
+                                     $allotherImages = explode(",", $otherImages);
+                                     $otherImageCount = count($allotherImages);
                                         echo '
 
-                                                    <div class="col-lg-12">
-                                                        <h3>'.$row["heading"].'</h3>
+                                        <div class="col-lg-12">
+                                            <h3 style="font-weight: bolder;">'.$row["heading"].'</h3>
+                                        </div>
+                                        <div class="col-lg-12 pl-0">
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <p style="color: black">By KO News - '.$row["date"].'</p>
+                                            </div>
+                                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <span class=""><i class="fa fa-eye" style="color: black"> 34</i></span>
+                                                <span class="ml-20"><i class="fa fa-comment" style="color: black"> 34</i></span>
+                                            </div> -->
+                                            <div class="col-lg-12 col-md-12 col-sm-12">
+                                                <button style="background:none;border: 1.5px solid #d114b1;
+                                                    height: 35px;margin-bottom: 5px;border-radius: 20px;
+                                                    width: 100px;color:#d114b1">
+                                                    <i class="fa fa-share-alt" style="color:#d114b1"></i> | Share
+                                                </button>
+                                                <a href="whatsapp://send?text=KhabarOdia News. Check the news '.$row["heading"]. '. Please click here to see full news '.$text.'" target="_blank" data-action="share/whatsapp/share"><button style="background:#32ba32; height: 35px;color:white;
+                                                    margin-bottom: 5px;border-radius: 20px;width: 35px;border:none"><i class="fa fa-whatsapp fa-1x" style="color:white;cursor:pointer"></i></button></a>
+                                                        <a href="http://www.facebook.com/sharer.php?u='.$text.'" target="_blank"><button style="background:blue; height: 35px;color:white;margin-bottom: 5px;
+                                                            border-radius: 20px;width: 35px;border:none"><i class="fa fa-facebook fa-1x" style="color:white;cursor:pointer"></i></button></a>
+                                                       </div>
+                                                       
                                                     </div>
                                                     <div class="col-lg-12 pl-0">
-                                                       <div class="col-lg-6 col-md-6 col-sm-12">
-                                                           <p style="color: black">By KO News - '.$row["date"].'</p>
+                                                        <img src="'.$row["image"].'" style="height: 100%;width: 100%;padding: 0px">';
+                                                    if($otherImageCount > 1)
+                                                    {
+                                                        for($i=0; $i<$otherImageCount;$i++)
+                                                        {
+                                                           echo '<div class="col-lg-6 col-md-6 col-sm-12">
+                                                              <img src="img/'.$allotherImages[$i].'" style="height: 100%;width: 100%;padding: 0px">
+                                                           </div>';
+                                                        }
+                                                    }
+                                                    else if ($otherImages!="")
+                                                    {
+                                                        echo '<div class="col-lg-6 col-md-6 col-sm-12">
+                                                              <img src="img/'.$otherImages.'" style="height: 100%;width: 100%;padding: 0px">
+                                                           </div>';
+                                                    }
+
+                                                    echo '</div>
+                                                    <br><br>
+                                                    <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                                                <button style="background:none;border: 1.5px solid #d114b1;
+                                                    height: 35px;margin-bottom: 5px;border-radius: 20px;
+                                                    width: 100px;color:#d114b1">
+                                                    <i class="fa fa-share-alt" style="color:#d114b1"></i> | Share
+                                                </button>
+                                                <a href="whatsapp://send?text=KhabarOdia News. Check the news '.$row["heading"]. '. Please click here to see full news '.$text.'" target="_blank" data-action="share/whatsapp/share"><button style="background:#32ba32; height: 35px;color:white;
+                                                    margin-bottom: 5px;border-radius: 20px;width: 35px;border:none"><i class="fa fa-whatsapp fa-1x" style="color:white;cursor:pointer"></i></button></a>
+                                                        <a href="http://www.facebook.com/sharer.php?u='.$text.'" target="_blank"><button style="background:blue; height: 35px;color:white;margin-bottom: 5px;
+                                                            border-radius: 20px;width: 35px;border:none"><i class="fa fa-facebook fa-1x" style="color:white;cursor:pointer"></i></button></a>
                                                        </div>
-                                                       <div class="col-lg-6 col-md-6 col-sm-12">
-                                                           <span class="ml-100"><i class="fa fa-eye" style="color: black"> 34</i></span>
-                                                           <span class="ml-20"><i class="fa fa-comment" style="color: black"> 34</i></span>
-                                                       </div>
-                                                    </div>
                                                     <div class="col-lg-12 pl-0">
-                                                        <img src="'.$row["image"].'" style="height: 100%;width: 100%;padding: 0px">
-                                                       <!--<div class="col-lg-6 col-md-6 col-sm-12">
-                                                          <img src="img/photo1.png" style="height: 100%;width: 100%;padding: 0px">
-                                                       </div>
-                                                       <div class="col-lg-6 col-md-6 col-sm-12">
-                                                          <img src="img/photo1.png" style="height: 100%;width: 100%">
-                                                       </div>-->
-                                                    </div>
-                                                    <br>
-                                                    <div class="col-lg-12">
-                                                        <p style="padding: 0px;color: black">'.$row["content"].'</p>
+                                                        <p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$row["content"].'</p>
                                                     </div>
                                         ';                                       
                                         
@@ -259,7 +290,7 @@
                                         {
                                                  $row=mysqli_fetch_assoc($result);
 
-                                                echo '<p>'.$row["heading"].'</p>';
+                                                echo '<p onclick="openNewsDetails('.$row["id"].')" style="cursor:pointer">'.$row["heading"].'</p>';
                                         }
                                         else
                                         {
@@ -269,7 +300,7 @@
 
                                     ?>
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-12" style="text-align: right;">
+                                <div class="col-lg-6 col-md-6 col-sm-12 next_article">
                                     <h6 style="color: black;font-weight: bold">Next Article</h6>
                                     <?php
                                         $new_id = intval($news_id)+1;
@@ -281,7 +312,7 @@
                                         {
                                                  $row=mysqli_fetch_assoc($result);
 
-                                                echo '<p>'.$row["heading"].'</p>';
+                                                echo '<p onclick="openNewsDetails('.$row["id"].')" style="cursor:pointer">'.$row["heading"].'</p>';
                                         }
                                         else
                                         {
@@ -346,7 +377,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>
@@ -370,7 +401,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>
@@ -458,5 +489,7 @@
         <!-- main JS
         ============================================ -->        
         <script src="js/main.js"></script>
+        <script src="js/biroyal.js"></script>
+
     </body>
 </html>

@@ -75,11 +75,11 @@
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
         <!-- Add your site or application content here -->
-        <header  id="topHeader">
+        <header  class="topHeader">
             <div class="container">
                 <ul>
                 <li id="currentDate"></li>
-                <li>About</li>
+                <li><a href="about.html">About</a></li>
                 <li>Reporters Panel</li>
                 <li>Contact Us</li>
             </ul>
@@ -87,29 +87,13 @@
         </header>
         <div class="wrapper">
             <header class="header-area">
-                <!-- <div class="container">
-                    <div class="row" style="margin-top: 10px">
-                        <div class="col-12 col-lg-12 col-md-12 col-sm-12">
-                            <h3>KhabarOdia</h3>
-                        </div>
-                        <
-                    </div>
-                    
-                </div> -->
+                
                 <!-- Menu Area
                 ============================================ -->
                  <div id="main-menu" class="sticker" style="color: black">
                     <div class="container">
                         <div class="row">
-                            <!-- <div class="col-md-12 col-xs-12">
-                                <div class="logo float-left navbar-header">
-                                    <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
-                                        <i class="fa fa-bars menu-open"></i>
-                                        <i class="fa fa-times menu-close"></i>
-                                    </button>
-                                    <a class="navbar-brand" href="index.html"><h3>Khabar Odia</h3></a>                         
-                                </div>
-                            </div> -->
+                            
                             <div class="col-md-12 col-xs-12">
                                 <div class="logo float-left navbar-header">
                                     <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu-2">
@@ -121,8 +105,8 @@
                                 <div class="main-menu float- collapse navbar-collapse" id="main-menu-2">
                                     <nav>                                        
                                         <ul class="menu one-page">                                        
-                                             <li class='active'><a href='index.html'>Home</a></li>
-                                             <li class=''><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
+                                             <li class=''><a href='index.html'>Home</a></li>
+                                             <li class='active'><a href='regional.php'>ଆଞ୍ଚଳିକ</a></li>
                                              <li class=''><a href='crime.php'>ଅପରାଧ</a></li>
                                              <li class=''><a href='headlines.php'>ମୁଖ୍ୟ ଖବର</a></li>
                                              <li class=''><a href='state.php'>ରାଜ୍ୟ</a></li>
@@ -316,7 +300,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row  pointerDiv" onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>
@@ -340,7 +324,7 @@
                                        // echo $row_cnt;
                                         while($row=mysqli_fetch_assoc($result))
                                         {
-                                            echo '<div class="row viewDetail " onclick="openNewsDetails('.$row["id"].')">
+                                            echo '<div class="row pointerDiv " onclick="openNewsDetails('.$row["id"].')">
                                                     <div class="col-lg-4 col-md-4 col-sm-12">
                                                         <img src="'.$row["image"].'">
                                                     </div>

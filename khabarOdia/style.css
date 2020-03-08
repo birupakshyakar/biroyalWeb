@@ -42,6 +42,24 @@ body {
     height: 100%;
     font-family: 'Open Sans', sans-serif;
 }
+.login-container{
+    text-align: center !important;
+    display: block !important;
+}
+.login-container input{
+    border-radius: 20px !important;
+    border:1px solid black;
+    padding: 5px;
+    color:black;
+
+}
+.login-container button{
+    height: 40px;
+    border-radius: 30px;
+    text-align: center;
+    line-height: 5px;
+
+}
 .viewDetail{
     cursor: pointer !important;
     height: 465px;
@@ -50,19 +68,23 @@ body {
 .pointerDiv{
     cursor: pointer !important;
 }
-#topHeader{
-    height: 25px; 
+.topHeader{
+    height: 25px !important; 
     background-color: black;
     color: white;
     font-size: 12px;
 }
-#topHeader ul{
+.topHeader ul{
     list-style: none;
 }
-#topHeader ul li{
+.topHeader ul li{
     display: inline-block;
     margin-left: 10px;
     line-height: 25px
+}
+.topHeader ul li a{
+    /*text-decoration: none;*/
+    color: white !important;
 }
 #main-menu ul li a, #main-menu a h3{
     color: black;
