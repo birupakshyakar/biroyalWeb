@@ -8,7 +8,8 @@ include 'connection/database_connection.php';
  	$usertype = $_POST["usertype"];
  	$sql="select * from login_details where user_id='$userid' and email='$email'";
  	$result = mysqli_query($conn, $sql);
- 	if($result){
+ 	$row_count = $result->num_rows;
+ 	if($row_count > 0){
  		echo "User already exist";
  	}
  	else{
