@@ -8,6 +8,8 @@
     $url_components = parse_url($actual_link);
     parse_str($url_components['query'], $params);
     $news_id = $params['news_details_value'];
+    $sql="update newslist set view_count=view_count+1 where id=".$news_id;
+    $result=mysqli_query($conn, $sql);
    // echo ' ID is '.$params['news_details_value'];
     $sql="SELECT * FROM `newslist` where id=".$news_id;
     $result = mysqli_query($conn, $sql);
@@ -187,10 +189,10 @@
                                             <div class="col-lg-6 col-md-6 col-sm-6">
                                                 <p style="color: black">By KO News - '.$row["date"].'</p>
                                             </div>
-                                            <!-- <div class="col-lg-6 col-md-6 col-sm-6">
-                                                <span class=""><i class="fa fa-eye" style="color: black"> 34</i></span>
-                                                <span class="ml-20"><i class="fa fa-comment" style="color: black"> 34</i></span>
-                                            </div> -->
+                                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                                <span class=""><i class="fa fa-eye" style="color: black"> '.$row["view_count"].'</i></span>
+                                                <span class="ml-20"><i class="fa fa-comment" style="color: black"> '.$row["comment_count"].'</i></span>
+                                            </div> 
                                             <div class="col-lg-12 col-md-12 col-sm-12">
                                                 <button style="background:none;border: 1.5px solid #d114b1;
                                                     height: 35px;margin-bottom: 5px;border-radius: 20px;
@@ -206,25 +208,87 @@
                                                     </div>
                                                     <div class="col-lg-12 pl-0">
                                                         <img src="'.$row["image"].'" style="height: 100%;width: 100%;padding: 0px">';
-                                                    if($otherImageCount > 1)
+                                                    $content_with_split = explode("<br>", $row["content"]);
+                                                    if(count($content_with_split) > 1)
                                                     {
-                                                        for($i=0; $i<$otherImageCount;$i++)
+                                                        if($otherImageCount > 1)
                                                         {
-                                                           echo '<div class="col-lg-6 col-md-6 col-sm-12">
-                                                              <img src="img/'.$allotherImages[$i].'" style="height: 100%;width: 100%;padding: 0px">
-                                                           </div>';
+                                                            if(count($content_with_split) > $otherImageCount){
+                                                                for($i=0; $i< count($content_with_split); $i++)
+                                                                {
+                                                                    echo '<p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$content_with_split[$i].'</p>';
+                                                                    if($i < $otherImageCount)
+                                                                    {
+                                                                        echo '<img src="img/'.$allotherImages[$i].'" style="height: 100%;width: 100%;padding: 0px">';
+                                                                    }
+                                                                }
+                                                            }
+                                                            else if( (count($content_with_split) < $otherImageCount) || (count($content_with_split) == $otherImageCount) )
+                                                            {
+                                                                for($i=0; $i<$otherImageCount;$i++)
+                                                                {
+
+                                                                   echo '<img src="img/'.$allotherImages[$i].'" style="height: 100%;width: 100%;padding: 0px">';
+                                                                   if($i < count($content_with_split))
+                                                                    {
+                                                                        echo '<p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$content_with_split[$i].'</p>';
+                                                                    }
+                                                                }
+
+                                                            }
+                                                            
+                                                        }
+                                                        else if ($otherImages!="")
+                                                        {
+                                                            for($i=0; $i< count($content_with_split); $i++)
+                                                            {
+                                                                echo '<p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$content_with_split[$i].'</p>';
+                                                                if($i==0)
+                                                                {
+                                                                    echo '<img src="img/'.$otherImages.'" style="height: 100%;width: 100%;padding: 0px">';
+                                                                }
+                                                            }
+                                                            
+                                                        }
+                                                        
+                                                        
+                                                         
+
+                                                    }
+                                                    else{
+
+                                                       
+                                                        if($otherImageCount > 1)
+                                                        {
+                                                            for($i=0; $i<$otherImageCount;$i++)
+                                                            {
+
+                                                               echo '
+                                                                  <img src="img/'.$allotherImages[$i].'" style="height: 100%;width: 100%;padding: 0px">';
+                                                               
+                                                                if($i == 0)
+                                                                {
+                                                                     echo '<p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$row["content"].'</p>';
+                                                                }
+                                                            }
+                                                        }
+                                                        else if ($otherImages!="")
+                                                        {
+                                                            echo '<p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$row["content"].'</p>';
+                                                            echo '<div class="col-lg-6 col-md-6 col-sm-12">
+                                                                  <img src="img/'.$otherImages.'" style="height: 100%;width: 100%;padding: 0px">
+                                                               </div>';
                                                         }
                                                     }
-                                                    else if ($otherImages!="")
-                                                    {
-                                                        echo '<div class="col-lg-6 col-md-6 col-sm-12">
-                                                              <img src="img/'.$otherImages.'" style="height: 100%;width: 100%;padding: 0px">
-                                                           </div>';
-                                                    }
+                                                    
 
                                                     echo '</div>
                                                     <br><br>
-                                                    <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
+                                                   
+                                                    <!--<div class="col-lg-12 pl-0">
+                                                        <p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$row["content"].'</p>
+                                                    </div> -->
+                                                     <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top: 10px;">
                                                 <button style="background:none;border: 1.5px solid #d114b1;
                                                     height: 35px;margin-bottom: 5px;border-radius: 20px;
                                                     width: 100px;color:#d114b1">
@@ -235,9 +299,6 @@
                                                         <a href="http://www.facebook.com/sharer.php?u='.$text.'" target="_blank"><button style="background:blue; height: 35px;color:white;margin-bottom: 5px;
                                                             border-radius: 20px;width: 35px;border:none"><i class="fa fa-facebook fa-1x" style="color:white;cursor:pointer"></i></button></a>
                                                        </div>
-                                                    <div class="col-lg-12 pl-0">
-                                                        <p style="padding: 0px;color: black;font-size:16px; text-align:justify">'.$row["content"].'</p>
-                                                    </div>
                                         ';                                       
                                         
                                     ?>
