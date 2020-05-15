@@ -3,6 +3,9 @@ $(".change").on('click', function(){
 	$(".change").removeClass('active');
 	$(this).addClass('active');
 });
+function inquiry(){
+	alert("gfgf");
+}
 function openModal(id)
 {
 	$("#"+id).modal();
